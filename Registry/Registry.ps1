@@ -88,14 +88,8 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 
 Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\vss" -Recurse -Force
 Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\lfsvc" -Recurse -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\RmSvc" -Recurse -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\TrkWks" -Recurse -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\whesvc" -Recurse -Force
 Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Spooler" -Recurse -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\VaultSvc" -Recurse -Force
 Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\DiagTrack" -Recurse -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\WSAIFabricSvc" -Recurse -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\InstallService" -Recurse -Force
 Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\webthreatdefsvc" -Recurse -Force
 Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\webthreatdefusersvc" -Recurse -Force
 
