@@ -22,6 +22,7 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies
 
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "Glazewm" -Value "glazewm.exe"
 
+Remove-ItemProperty -Path "HKCU:\Environment" -Name "OneDrive"
 Set-ItemProperty -Path "HKCU:\Environment" -Name "GLAZEWM_CONFIG_PATH" -Value "C:\Windows\config.yaml"
 
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" -Name "AutomaticManagedPagefile" -Value 0 -Type DWord
@@ -92,8 +93,6 @@ Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Spooler" -Recurse -Fo
 Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\DiagTrack" -Recurse -Force
 Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\webthreatdefsvc" -Recurse -Force
 Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\webthreatdefusersvc" -Recurse -Force
-
-Remove-ItemProperty -Path "HKCU:\Environment" -Name "OneDrive"
 Remove-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "SecurityHealth"
 
 Stop-Process -Name Explorer
