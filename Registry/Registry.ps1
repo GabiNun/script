@@ -86,17 +86,17 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3" -Name "Settings" -Value ([byte[]](0x30,0x00,0x00,0x00,0xfe,0xff,0xff,0xff,0x03,0x00,0x00,0x00,0x03,0x00,0x00,0x00,0x30,0x00,0x00,0x00,0x30,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x08,0x04,0x00,0x00,0x80,0x07,0x00,0x00,0x38,0x04,0x00,0x00,0x60,0x00,0x00,0x00,0x01,0x00,0x00,0x00))
 
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\vss" -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\lfsvc" -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\RmSvc" -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\TrkWks" -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\whesvc" -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Spooler" -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\VaultSvc" -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\DiagTrack" -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\WSAIFabricSvc" -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\InstallService" -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\webthreatdefsvc" -Force
-Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\webthreatdefusersvc" -Force
+Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\vss" -Recurse -Force
+Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\lfsvc" -Recurse -Force
+Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\RmSvc" -Recurse -Force
+Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\TrkWks" -Recurse -Force
+Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\whesvc" -Recurse -Force
+Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Spooler" -Recurse -Force
+Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\VaultSvc" -Recurse -Force
+Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\DiagTrack" -Recurse -Force
+Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\WSAIFabricSvc" -Recurse -Force
+Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\InstallService" -Recurse -Force
+Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\webthreatdefsvc" -Recurse -Force
+Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\webthreatdefusersvc" -Recurse -Force
 
 Stop-Process -Name Explorer
