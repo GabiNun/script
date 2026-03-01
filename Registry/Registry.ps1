@@ -20,6 +20,7 @@ Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\P
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "ConsentPromptBehaviorAdmin" -Value 0 -Type DWord
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "PromptOnSecureDesktop" -Value 0 -Type DWord
 
+Remove-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "SecurityHealth"
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "Glazewm" -Value "glazewm.exe"
 
 Remove-ItemProperty -Path "HKCU:\Environment" -Name "OneDrive"
@@ -93,6 +94,5 @@ Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Spooler" -Recurse -Fo
 Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\DiagTrack" -Recurse -Force
 Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\webthreatdefsvc" -Recurse -Force
 Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\webthreatdefusersvc" -Recurse -Force
-Remove-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "SecurityHealth"
 
 Stop-Process -Name Explorer
