@@ -1,11 +1,11 @@
-New-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer" -Force
-New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -Force
-New-Item -Path "HKCU:\Software\Policies\Microsoft\Windows\Explorer" -Force
-New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell" -Force
-New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\SystemRestore" -Force
-New-Item -Path "HKLM:\SOFTWARE\Microsoft\PolicyManager\current\device\Education" -Force
-New-Item -Path "HKLM:\SOFTWARE\Microsoft\PolicyManager\current\device\Start" -Force
-New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Explorer" -Force
+New-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer" | Out-Null
+New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" | Out-Null
+New-Item -Path "HKCU:\Software\Policies\Microsoft\Windows\Explorer" | Out-Null
+New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell" | Out-Null
+New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\SystemRestore" | Out-Null
+New-Item -Path "HKLM:\SOFTWARE\Microsoft\PolicyManager\current\device\Education" | Out-Null
+New-Item -Path "HKLM:\SOFTWARE\Microsoft\PolicyManager\current\device\Start" | Out-Null
+New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Explorer" | Out-Null
 
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ShowTaskViewButton" -Value 0 -Type DWord
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "LaunchTo" -Value 1 -Type DWord
