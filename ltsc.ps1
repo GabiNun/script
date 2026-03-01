@@ -7,7 +7,7 @@ Expand-Archive DesktopAppInstaller_Dependencies.zip
 Add-AppxPackage DesktopAppInstaller.msixbundle -DependencyPath DesktopAppInstaller_Dependencies\x64\*
 Remove-Item DesktopAppInstaller* -Recurse
 
-irm https://github.com/GabiNun/script/raw/main/Registry/Registry.ps1 | iex
+irm https://github.com/GabiNun/script/raw/main/Registry.ps1 | iex
 irm https://github.com/GabiNun/script/raw/main/Glazewm/Glazewm.ps1 | iex
 
 attrib +h "$Env:AppData\Microsoft\Windows\Start Menu\Programs\Accessibility"
@@ -48,4 +48,5 @@ Dism /Online /Enable-Feature /FeatureName:Microsoft-Hyper-V-All /NoRestart | Out
 
 Unregister-ScheduledTask -Confirm:$False
 Get-CimInstance Win32_PageFileSetting | Remove-CimInstance
+
 
